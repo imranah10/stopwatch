@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <style>
+      body {
+        background: black;
+      }
+      header {
+        min-height: 200px;
+        width: 1200px;
+        margin: 100px auto;
+        /* background: white; */
+      }
+      .a {
+        height: 250px;
+        width: 250px;
+        border: 10px solid aqua;
+        float: left;
+        box-sizing: border-box;
+        margin: 25px;
+        box-shadow: 0px 0px 25px 3px aqua inset;
+        border-radius: 10px;
+        font-size: 100px;
+        color: aqua;
+        text-align: center;
+        padding-top: 20px;
+      }
+      p {
+        font-size: 30px;
+      }
+      input[type="button"] {
+        font-size: 2rem;
+        background-color: aqua;
+        cursor: pointer;
+        position: fixed;
+        right: 45%;
+        margin-top: 20px;
+      }
+
+      h1 {
+        color: red;
+        position: fixed;
+        top: 0;
+        right: 40%;
+        font-size: 2.5rem;
+      }
+
+      /* responsive */
+      @media (max-width: 420px) {
+        header {
+          display: block;
+          background-color: red;
+          min-height: 220px;
+          width: 900px;
+          margin: 80px auto;
+          border-radius: 25px;
+        }
+        header .a {
+          height: 200px;
+          width: 200px;
+          border: 5px solid aqua;
+          float: left;
+          box-sizing: border-box;
+          margin: 10px;
+          padding: 5px;
+        }
+        b {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.8rem;
+        }
+        h1 {
+          position: fixed;
+          color: aqua;
+          top: 0;
+          right: 36%;
+        }
+      }
+
+      /* for middle device */
+      /* @media(max-width:700px) {
+    
+       h1{
+        position: fixed;
+        top: 0;
+        right: 40%;
+        
+       }
+       
+      
+    } */
+    </style>
+  </head>
+  <body>
+    <h1>STOP WATCH</h1>
+    <header>
+      <div class="a">
+        <b id="h">00</b>
+        <p>HOUR</p>
+      </div>
+      <div class="a">
+        <b id="m">00</b>
+        <p>MINUTE</p>
+      </div>
+      <div class="a">
+        <b id="s">00</b>
+        <p>SECOND</p>
+      </div>
+      <div class="a">
+        <b id="ms">00</b>
+        <p>MILLISECOND</p>
+      </div>
+    </header>
+    <center>
+      <input type="button" value="START" onclick="start_stop(this)" />
+    </center>
+
+    <script src="index.js"></script>
+  </body>
+</html>
